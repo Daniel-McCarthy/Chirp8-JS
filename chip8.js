@@ -90,14 +90,14 @@ function test()
 	}
 	else
 	{
-		setTimeout(test, 5);
+		setTimeout(test, 2);
 	}
 }
 
 
 function startTimer()
 {
-	setInterval(decrementTimers, 1);//1000/60);
+	setInterval(decrementTimers, 1000/60);
 	test();
 }
 
