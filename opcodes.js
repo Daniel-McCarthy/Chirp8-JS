@@ -472,13 +472,13 @@ function opcodeFX1E(x)
 function opcodeFX29(x)
 {
 	//Set I to position in memory of X Font Character
-	I = x * 5;
+	I = chipRegisters[x] * 5;
 }
 
 function opcodeFX33(x)
 {
 	//Stores decimal representation of VX at I
-	var number = x.toString();
+	var number = chipRegisters[x].toString().split("").reverse().join("");
 
 	if (number.length < 3)
 	{
@@ -505,9 +505,9 @@ function opcodeFX55(x)
 {
 	//stores data from registers V0 to VX in memory at address I
 
-	for (var i = 0; i < x; i++)
+	for (var i = 0; i <= x; i++)
 	{	
-		writeMemory(I + (2 * i), chipRegisters[i]);
+		writeMemory(I + i, chipRegisters[i]);
 	}
 
 }
@@ -515,9 +515,9 @@ function opcodeFX55(x)
 function opcodeFX65(x)
 {
 	//copies data from memory at address I into registers V0 to VX
-	for (var i = 0; i < x; i++)
+	for (var i = 0; i <= x; i++)
 	{
-		chipRegisters[i] = (( readMemory(I + (2 * i)) << 4 ) | ( readMemory(I + 1 + (2 * i)) ));
+		chipRegisters[i] = readMemory(I + i);
 	}
 
 }
