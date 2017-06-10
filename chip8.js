@@ -28,6 +28,7 @@
 	var paused = false;
 	var step = false;
 	var gameSpeed = 1;
+	var debugging = false;
 
 	//updateKeysDisplay();
 
@@ -46,7 +47,10 @@ function test()
 
 	if(!paused || step)
 	{
-		updateChipVariables();
+		if(debugging)
+		{
+			updateChipVariables();
+		}
 
 		var opcode = ( (readMemory(memPointer++) << 8) | readMemory(memPointer++) );
 	
@@ -58,7 +62,10 @@ function test()
 			}
 		}
 
-		debugOpcode(opcode);
+		if(debugging)
+		{
+			debugOpcode(opcode);
+		}
 
 		selectOpcode(opcode);
 
@@ -77,13 +84,20 @@ function test()
 
 	step = false;
 
-	setTimeout(test, tempGameSpeed);
+	if(debugging)
+	{
+		setTimeout(test, tempGameSpeed);
+	}
+	else
+	{
+		setTimeout(test, 5);
+	}
 }
 
 
 function startTimer()
 {
-	setInterval(decrementTimers, 1000/60);
+	setInterval(decrementTimers, 1);//1000/60);
 	test();
 }
 
@@ -125,4 +139,20 @@ function setGameSpeed(speed)
 function stepOnce()
 {
 	step = true;
+}
+
+function hideShowDebugger()
+{
+	var debuggerDiv= document.getElementById("debuggerDiv");
+       	debuggerDiv.style.display = (debuggerDiv.style.display == 'block') ? 'none' : 'block';
+
+	if(debuggerDiv.style.display == 'none')
+	{
+		paused = false;
+		debugging = false;
+	}
+	else
+	{
+		debugging = true;
+	}
 }
