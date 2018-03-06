@@ -478,25 +478,10 @@ function opcodeFX29(x)
 function opcodeFX33(x)
 {
 	//Stores decimal representation of VX at I
-	var number = chipRegisters[x].toString().split("").reverse().join("");
 
-	if (number.length < 3)
-	{
-		var extendNumberLength = 3 - number.length;
-		var newString = "";
-
-		for (var  i = 0; i < extendNumberLength; i++)
-		{
-			newString += '0';
-		}
-
-		number = newString + number;
-		
-	}
-
-	writeMemory(I, parseInt(number[0]));
-	writeMemory(I + 1, parseInt(number[1]));
-	writeMemory(I + 2, parseInt(number[2]));
+	writeMemory(I, Math.floor( chipRegisters[x] / 100 ));
+	writeMemory(I + 1,  Math.floor( (chipRegisters[x]/ 10) % 10));
+	writeMemory(I + 2, chipRegisters[x] % 10);
 
 
 }
