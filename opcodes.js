@@ -410,7 +410,7 @@ function opcodeEX9E(x)
 	if (chipKeys[chipRegisters[x]] == 1)
 	{
 		memPointer += 2;
-		chipKeys[chipRegisters[x]] = 0;//expirimental
+		//chipKeys[chipRegisters[x]] = 0;//experimental
 	}
 
 }
@@ -421,7 +421,7 @@ function opcodeEXA1(x)
 	if (chipKeys[chipRegisters[x]] == 0)
 	{
 		memPointer += 2;
-		chipKeys[chipRegisters[x]] = 0;//expirimental
+		//chipKeys[chipRegisters[x]] = 0;//experimental
 	}
 }
 
@@ -441,7 +441,7 @@ function opcodeFX0A(x)
 		{
 			keyFound = true;
 			chipRegisters[x] = i;
-			chipKeys[i] = 0;//expirimental
+			//chipKeys[i] = 0;//experimental
 		}
 	}
 	
