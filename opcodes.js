@@ -354,6 +354,7 @@ function opcode8XY5(x, y)
 function opcode8XY6(x)
 {
 	//Set VX >>= 1
+	chipRegisters[0xF] =((chipRegisters[x] & 0x1) > 0) ? 1 : 0;
 	chipRegisters[x] >>= 1;
 }
 
