@@ -82,81 +82,81 @@ function loadFontSprites()
 	writeMemory(24, 0x10);
 
 	//Load Font Character 5
+	writeMemory(25, 0xF0);
+	writeMemory(26, 0x80);
+	writeMemory(27, 0xF0);
+	writeMemory(28, 0x10);
+	writeMemory(29, 0xF0);
+
+	//Load Font Character 6
 	writeMemory(30, 0xF0);
 	writeMemory(31, 0x80);
 	writeMemory(32, 0xF0);
-	writeMemory(33, 0x10);
+	writeMemory(33, 0x90);
 	writeMemory(34, 0xF0);
 
-	//Load Font Character 6
-	writeMemory(35, 0xF0);
-	writeMemory(36, 0x80);
-	writeMemory(37, 0xF0);
-	writeMemory(38, 0x90);
-	writeMemory(39, 0xF0);
-
 	//Load Font Character 7
-	writeMemory(40, 0xF0);
-	writeMemory(41, 0x10);
-	writeMemory(42, 0x20);
-	writeMemory(43, 0x40);
-	writeMemory(44, 0x40);
+	writeMemory(35, 0xF0);
+	writeMemory(36, 0x10);
+	writeMemory(37, 0x20);
+	writeMemory(38, 0x40);
+	writeMemory(39, 0x40);
 
 	//Load Font Character 8
+	writeMemory(40, 0xF0);
+	writeMemory(41, 0x90);
+	writeMemory(42, 0xF0);
+	writeMemory(43, 0x90);
+	writeMemory(44, 0xF0);
+
+	//Load Font Character 9
 	writeMemory(45, 0xF0);
 	writeMemory(46, 0x90);
 	writeMemory(47, 0xF0);
-	writeMemory(48, 0x90);
+	writeMemory(48, 0x10);
 	writeMemory(49, 0xF0);
 
-	//Load Font Character 9
+	//Load Font Character A
 	writeMemory(50, 0xF0);
 	writeMemory(51, 0x90);
 	writeMemory(52, 0xF0);
-	writeMemory(53, 0x10);
-	writeMemory(54, 0xF0);
-
-	//Load Font Character A
-	writeMemory(55, 0xF0);
-	writeMemory(56, 0x90);
-	writeMemory(57, 0xF0);
-	writeMemory(58, 0x90);
-	writeMemory(59, 0x90);
+	writeMemory(53, 0x90);
+	writeMemory(54, 0x90);
 
 	//Load Font Character B
-	writeMemory(60, 0xE0);
-	writeMemory(61, 0x90);
-	writeMemory(62, 0xE0);
-	writeMemory(63, 0x90);
-	writeMemory(64, 0xE0);
+	writeMemory(55, 0xE0);
+	writeMemory(56, 0x90);
+	writeMemory(57, 0xE0);
+	writeMemory(58, 0x90);
+	writeMemory(59, 0xE0);
 
 	//Load Font Character C
-	writeMemory(65, 0xF0);
-	writeMemory(66, 0x80);
-	writeMemory(67, 0x80);
-	writeMemory(68, 0x80);
-	writeMemory(69, 0xF0);
+	writeMemory(60, 0xF0);
+	writeMemory(61, 0x80);
+	writeMemory(62, 0x80);
+	writeMemory(63, 0x80);
+	writeMemory(64, 0xF0);
 
 	//Load Font Character D
-	writeMemory(70, 0xE0);
-	writeMemory(71, 0x90);
-	writeMemory(72, 0x90);
-	writeMemory(73, 0x90);
-	writeMemory(74, 0xE0);
+	writeMemory(65, 0xE0);
+	writeMemory(66, 0x90);
+	writeMemory(67, 0x90);
+	writeMemory(68, 0x90);
+	writeMemory(69, 0xE0);
 
 	//Load Font Character E
+	writeMemory(70, 0xF0);
+	writeMemory(71, 0x80);
+	writeMemory(72, 0xF0);
+	writeMemory(73, 0x80);
+	writeMemory(74, 0xF0);
+
+	//Load Font Character F
 	writeMemory(75, 0xF0);
 	writeMemory(76, 0x80);
 	writeMemory(77, 0xF0);
 	writeMemory(78, 0x80);
-	writeMemory(79, 0xF0);
-
-	//Load Font Character F
-	writeMemory(80, 0xF0);
-	writeMemory(81, 0x80);
-	writeMemory(82, 0xF0);
-	writeMemory(83, 0x80);
-	writeMemory(84, 0x80);
+	writeMemory(79, 0x80);
 
 }
 
