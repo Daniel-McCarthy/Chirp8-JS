@@ -360,6 +360,7 @@ function opcode8XY6(x)
 function opcode8XY7(x, y)
 {
 	//Set VX = VY - VX
+	chipRegisters[0xF] = (chipRegisters[y] > chipRegisters[x]) ? 1 : 0;
 	chipRegisters[x] = chipRegisters[y] - chipRegisters[x];
 }
 
