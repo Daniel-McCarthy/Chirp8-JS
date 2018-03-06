@@ -136,7 +136,7 @@ function selectOpcode(opcode)
 	case 0x9000:
 	{
 		//Conditional opcode skip (if VX != VY)
-		opcode9XYN((opcode & 0x0F00) >> 8, (opcode & 0x00F0) >> 4);
+		opcode9XY0((opcode & 0x0F00) >> 8, (opcode & 0x00F0) >> 4);
 		break;
 	}
 	case 0xA000:
@@ -369,7 +369,7 @@ function opcode8XYE(x)
 	chipRegisters[x] <<= 1;
 }
 
-function opcode9XYN(x, y)
+function opcode9XY0(x, y)
 {
 	//Conditional opcode skip (if VX != VY)
 	if (chipRegisters[x] != chipRegisters[y])
