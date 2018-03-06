@@ -342,6 +342,7 @@ function opcode8XY3(x, y)
 function opcode8XY4(x, y)
 {
 	//Set VX += VY
+	chipRegisters[0xF] = (chipRegisters[x] + chipRegisters[y] > 0xFF) ? 1 : 0;
 	chipRegisters[x] += chipRegisters[y];
 }
 
