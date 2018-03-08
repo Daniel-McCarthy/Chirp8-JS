@@ -30,15 +30,9 @@ function clearScreen()
 	var canvas = document.getElementById("hellokitty");
 	var context = canvas.getContext("2d");
 
-	for(var i = 0; i < 64; i++)
-	{
-		for(var j = 0; j < 32; j++)
-		{
-			pixels[i][j] = 0;
-			context.fillStyle = "black";
-			context.fillRect(i * 4, j * 4, 4, 4);
-		}
-	}
+	context.fillStyle = "black";
+	context.fillRect(0, 0, 4*64, 4*32);
+
 }
 
 function xorPixel(x, y)
