@@ -100,6 +100,7 @@ function test()
 
 function startTimer()
 {
+	clearScreen();
 	setInterval(decrementTimers, 1000/60);
 	test();
 }
