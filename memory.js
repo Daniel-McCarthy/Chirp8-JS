@@ -6,10 +6,6 @@ function writeMemory(address, data)
 	}
 }
 
-function readMemory(address)
-{
-	return chipMemory[address];
-}
 
 function loadRom()
 {
@@ -38,7 +34,7 @@ function readSprite(address, height)
 
 	for(var i = 0; i < height; i++)
 	{
-		newSprite.push(readMemory(address + i));
+		newSprite.push(chipMemory[address + i]);
 	}
 
 	return newSprite;

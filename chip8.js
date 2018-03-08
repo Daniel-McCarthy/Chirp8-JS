@@ -52,7 +52,7 @@ function test()
 			updateChipVariables();
 		}
 
-		var opcode = ( (readMemory(memPointer++) << 8) | readMemory(memPointer++) );
+		var opcode = ( (chipMemory[memPointer++] << 8) | chipMemory[memPointer++] );
 	
 		if(textbox.value.length > 50000)//50000
 		{

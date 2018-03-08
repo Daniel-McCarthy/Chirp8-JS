@@ -507,7 +507,7 @@ function opcodeFX65(x)
 	//copies data from memory at address I into registers V0 to VX
 	for (var i = 0; i <= x; i++)
 	{
-		chipRegisters[i] = readMemory(I + i);
+		chipRegisters[i] = chipMemory[I + i];
 	}
 
 }
