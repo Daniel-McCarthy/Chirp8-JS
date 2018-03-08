@@ -1,5 +1,5 @@
 	var pixels = Array(64);
-
+	
 	for(var i = 0; i < 64; i++)
 	{
 		pixels[i] = Array(32).fill(0);
@@ -77,12 +77,6 @@ function test()
 			tempGameSpeed = 0;
 		}
 
-	}
-
-	var nextOp = readMemory(memPointer);
-	if((nextOp & 0xF0) == 0xD0)
-	{
-		tempGameSpeed = 0;
 	}
 
 	step = false;
