@@ -1,30 +1,4 @@
 
-function drawCanvas()
-{
-	var canvas = document.getElementById("hellokitty");
-	var context = canvas.getContext("2d");
-	
-	for(var i = 0; i < 64; i++)
-	{
-		for(var j = 0; j < 32; j++)
-		{
-			
-			if(pixels[i][j] == 0)
-			{
-				
-				context.fillStyle = "black";
-				context.fillRect(i * 4, j * 4, 4, 4);
-			}
-			else
-			{
-				context.fillStyle = "white";
-				context.fillRect(i * 4, j * 4, 4, 4);
-			}
-
-		}
-	}
-}
-
 function clearScreen()
 {
 	var canvas = document.getElementById("hellokitty");
@@ -43,12 +17,16 @@ function xorPixel(x, y)
 	if(pixels[x][y] == 0)
 	{
 		pixels[x][y] = 1;
-		drawCanvas();
+		context.fillStyle = "white";
+		context.fillRect(x * 4, y * 4, 4, 4);
+		//drawCanvas();
 		return false;
 	}
 	else
 	{
 		pixels[x][y] = 0;
+		context.fillStyle = "black";
+		context.fillRect(x * 4, y * 4, 4, 4);
 		return true;
 	}
 }
