@@ -54,11 +54,14 @@ function test()
 
 		var opcode = ( (chipMemory[memPointer++] << 8) | chipMemory[memPointer++] );
 	
-		if(textbox.value.length > 50000)//50000
+		if(debugging)
 		{
-			for(var i = 0; i < 30; i++)
+			if(textbox.value.length > 50000)//50000
 			{
-				textbox.value = textbox.value.substring(textbox.value.indexOf("\n") + 2, textbox.value.length);
+				for(var i = 0; i < 30; i++)
+				{
+					textbox.value = textbox.value.substring(textbox.value.indexOf("\n") + 2, textbox.value.length);
+				}
 			}
 		}
 
