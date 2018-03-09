@@ -184,6 +184,9 @@ document.addEventListener('keyup', function(event) {
 		chipKeys[0xF] = 0;
 	}
 
-	updateKeysDisplay();
+	if(debugging)
+	{
+		updateKeysDisplay();
+	}
 
 });

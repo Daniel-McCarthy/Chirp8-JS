@@ -1,10 +1,10 @@
 	var pixels = Array(64);
-	
+
 	for(var i = 0; i < 64; i++)
 	{
 		pixels[i] = Array(32).fill(0);
 	}
-
+	
 	var a = 0;
 	var b = 0;
 

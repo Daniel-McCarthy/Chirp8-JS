@@ -195,7 +195,7 @@ function selectOpcode(opcode)
 			}
 			case 0x000A:
 			{
-				//cin>>VX //stop operation until input recieved
+				//cin>>VX //stop operation until input received
 				opcodeFX0A((opcode & 0x0F00) >> 8);
 				break;
 			}
